@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    index: './src/js/index.js',
+    detail: './src/js/detail.js'
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'js/[name].[contenthash].js',

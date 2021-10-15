@@ -32,17 +32,36 @@ $spacer: (
 
 $theme-fonts: (
 	300: 'Light',
-	400: 'Regular',
-	500: 'Medium',
-	700: 'Bold',
-	900: 'Black'
+	600: 'SemiBold',
+	800: 'ExtraBold'
+);
+
+
+$white: hsl(0, 0%, 100%); //White (Dark Mode Text & Light Mode Elements)
+$alabaster: hsl(0, 0%, 98%); //Very Light Gray (Light Mode Background)
+$gray: hsl(0, 0%, 52%); //Dark Gray (Light Mode Input)
+$blue: hsl(209, 23%, 22%); //Dark Blue (Dark Mode Elements)
+$ebonyClay: hsl(207, 26%, 17%); //Very Dark Blue (Dark Mode Background)
+$dark: hsl(200, 15%, 8%); //Very Dark Blue (Light Mode Text)
+
+$theme-colors: (
+	light: (
+		'white': $white,
+		'alabaster': $alabaster,
+		'gray': $gray
+	),
+	dark: (
+		'blue': $blue,
+		'ebonyClay': $ebonyClay,
+		'dark': $dark
+	)
 );
 
 //BASE
-$font-family-base: Poppins;
+$font-family-base: Nunito Sans;
 $font-size-base: 1rem;
-$font-weight-base: 400;
-$body-bg: #fff;
+$font-weight-base: var(--font-Light);
+$body-bg: var(--light-alabaster);
 
 //PATH
 $img-path: '../img';

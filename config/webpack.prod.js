@@ -42,7 +42,10 @@ const rulesForJS = {
   exclude: /node_modules/,
   loader: 'babel-loader',
   options: {
-    presets: ['@babel/preset-env']
+    presets: ['@babel/preset-env'],
+    plugins: [
+      "@babel/plugin-transform-runtime"
+    ]
   }
 };
 
@@ -54,6 +57,12 @@ const prodConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/views/index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'detail.html',
+      template: './src/views/detail.html',
+      chunks: ['detail']
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.[contenthash].css'
