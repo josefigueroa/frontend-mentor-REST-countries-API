@@ -7,6 +7,17 @@
     }
   }
 
+  --body-bg: var(--light-alabaster);
+  --bg: var(--light-white);
+  --text-color: var(--dark-dark);
+
+  --search-color: var(--light-gray);
+  --theme-img: url('#{$img-path}/moon.svg');
+
+  --box-shadow-color: rgba(133, 133, 133, .2);
+
+  --icon-back: url('#{$img-path}/back.svg');
+
   @each $key, $value in $theme-fonts {
     --font-#{$value}: #{$key};
   }

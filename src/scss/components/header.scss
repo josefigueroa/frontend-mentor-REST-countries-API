@@ -1,0 +1,35 @@
+@use '../abstratcs/' as *;
+
+.header{
+  height: rem(100);
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(30);  
+  box-shadow: 0 7px 10px 0 var(--box-shadow-color);
+  @include breakpoint('medium'){
+    margin-bottom: rem(50);
+  }
+  &__wrapper{
+    padding-left: rem(20);
+    padding-right: rem(20);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: rem(1280);
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint('xxlarge'){
+      padding: 0;
+    }
+  }
+  &__title{
+    margin: 0;
+    font-weight: var(--font-ExtraBold);
+    font-size: rem(18);
+    @include breakpoint('medium'){
+      font-size: rem(30);
+    }
+  }
+}

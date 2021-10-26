@@ -1,0 +1,13 @@
+@use '../abstratcs/' as *;
+
+.footer{
+  padding: rem(60) rem(20) rem(30) rem(20);
+  text-align: center;
+  &__links{
+    text-decoration: underline;
+    color: var(--text-color);
+    &:hover{
+      opacity: .7;
+    }
+  }
+}

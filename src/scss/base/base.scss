@@ -1,9 +1,37 @@
 @use '../abstratcs/' as *;
 
+[data-theme="dark"]{
+  --body-bg: var(--dark-ebonyClay);
+  --bg: var(--dark-blue);
+  --text-color: var(--light-white);
+
+  --search-color: var(--light-white);
+  --theme-img: url('#{$img-path}/moon-dark.svg');
+
+  --box-shadow-color: rgba(17, 21, 23, .2);
+
+  --icon-back: url('#{$img-path}/back-dark.svg');
+
+  .form__theme{
+    &:before{
+      transform: rotate(32deg);
+    }
+  }
+}
+
 body{
-  background-color: $body-bg;
+  background-color: var(--body-bg);
+  color: var(--text-color);
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   background-repeat: no-repeat;
+  transition: background .4s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex: 1;
 }

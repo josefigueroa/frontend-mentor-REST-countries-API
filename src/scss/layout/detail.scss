@@ -1,0 +1,29 @@
+@use '../abstratcs/' as *;
+
+.detail{
+  &__wrapper{
+    opacity: 0;
+    transition: .4s;
+    @include breakpoint('medium'){
+      display: flex;
+      gap: rem(120);    
+    }
+  }
+  &__info{
+    flex: 1;
+    margin-top: rem(45);
+  }
+  &__flag{
+    max-height: rem(460);
+    @include breakpoint('medium'){
+      max-width: rem(560);
+      width: 100%;
+      height: rem(400);
+      max-height: 100%;
+    }
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

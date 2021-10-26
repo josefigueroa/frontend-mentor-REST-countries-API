@@ -1,0 +1,31 @@
+@use '../abstratcs/' as *;
+
+.pills{
+  background-color: var(--bg);
+  color: var(--text-color);
+  border: 0;
+  padding: rem(4) rem(9);
+  border-radius: rem(5);
+  cursor: pointer;
+  box-shadow: 0 0 9px 9px var(--box-shadow-color);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  &--back{
+    display: flex;
+    align-items: center;
+    padding: 0 rem(30);
+    margin-bottom: rem(125);
+    width: auto;
+    &:before{
+      content: '';
+      background-image: var(--icon-back);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: rem(5);
+    }
+   
+  }
+}

@@ -1,0 +1,82 @@
+@use '../abstratcs/' as *;
+
+.form{
+  margin-bottom: rem(40);
+  @include breakpoint('medium'){
+    display: flex;
+    justify-content: space-between;
+  }
+  &__custom{
+    &-checbox{
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+  &__theme{
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: rem(14);
+    font-weight: var(--font-SemiBold);
+    color: var(--text-color);
+    cursor: pointer;
+    &:before{
+      content: '';
+      background-image: var(--theme-img);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: rem(16);
+      height: rem(16);
+      margin-right: rem(5);
+      vertical-align: middle;
+    }
+    @include breakpoint('medium'){
+      font-size: rem(18);
+    }
+  }
+  &__group{
+    position: relative;
+    margin-bottom: rem(50);
+    width: 100%;
+    @include breakpoint('medium'){
+      max-width: rem(480);
+    }
+  }
+  &__control{
+    height: rem(60);    
+    border-radius: rem(10);
+    padding-left: rem(70);
+    border: 0;
+    width: 100%;
+    font-size: rem(14);
+    color: var(--text-color);
+    background-color: var(--bg);
+    box-shadow: 0 7px 10px 0 var(--box-shadow-color);
+  }
+  &__img{
+    fill: var(--search-color);
+    position: absolute;
+    width: 22px;
+    top: 50%;
+    left: rem(30);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  &__select{
+    width: 100%;
+    max-width: rem(245);
+    color: var(--text-color);
+    background-color: var(--bg);
+    height: rem(60);
+    border-radius: rem(10);
+    padding-left: rem(30);
+    padding-right: rem(30);
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 7px 10px 0 var(--box-shadow-color);
+    @include breakpoint('medium'){
+      max-width: rem(194);
+    }
+  }
+}
