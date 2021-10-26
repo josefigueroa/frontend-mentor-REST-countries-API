@@ -3,6 +3,13 @@ const merge = require('merge-descriptors');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const rulesForHTML =   {
+  test:/\.html$/,
+  use: [
+    'html-loader'
+  ]
+};
+
 const rulesForCss = {
   test: /\.scss$/,   
   use: [
@@ -49,7 +56,7 @@ const rulesForJS = {
   }
 };
 
-const rules = [rulesForFonts, rulesForImg, rulesForCss, rulesForJS];
+const rules = [rulesForHTML, rulesForFonts, rulesForImg, rulesForCss, rulesForJS];
 
 const prodConfig = {
   mode: 'production',
