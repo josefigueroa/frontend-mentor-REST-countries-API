@@ -22,7 +22,7 @@ export class UI {
         htmlTemplate += `
             <article class="countries__container">
             <figure class="countries__flag">
-              <a href="/detail.html?country=${element.name}">
+              <a href="/detail.html?country=${encodeURI(element.name)}">
                 <img src="${element.flags.png}" width="600" height="300" alt="${element.name} flag">
               </a>
             </figure>
@@ -80,7 +80,7 @@ export class UI {
     data.forEach(element => {
       htmlTemplate += `
         <li class="countries__item">
-          <a href="/detail.html?country=${element.name}" class="pills">${element.name}</a>
+          <a href="/detail.html?country=${encodeURI(element.name)}" class="pills">${element.name}</a>
         </li>
       `;
     });
